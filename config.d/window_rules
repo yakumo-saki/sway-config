@@ -1,0 +1,87 @@
+	# Auto float apps
+	for_window [app_id="system-config-printer"] floating enable
+	for_window [app_id="gnome-calculator"] floating enable
+	for_window [app_id="keepassxc"] floating enable
+	for_window [class="Bitwarden"] floating enable
+	for_window [class="(?i)Lxappearance$"] floating enable
+	for_window [app_id="(?i)mpv"] floating enable
+	for_window [app_id="pavucontrol"] floating enable
+	for_window [app_id="vlc"] floating enable
+	for_window [app_id="tlp-ui"] floating enable
+	for_window [app_id="pamac-manager"] floating enable
+	for_window [app_id="nm-connection-editor$"] floating enable
+	for_window [app_id="simple-scan"] floating enable
+	for_window [app_id="firetools"] floating enable
+	for_window [app_id="firewall-config"] floating enable
+	for_window [app_id="gnome-(calendar|calculator|power-statistics|control-center)"] floating enable
+	for_window [app_id="(pavucontrol|psensor)"] floating enable
+	for_window [title="^Open File$"] floating enable
+	for_window [title="nmtui - Kitty"] floating enable
+	for_window [title="Fcitx Configuration"] floating enable
+	for_window [title="Update Check|Cryptomator"] floating enable, resize set 800 600
+	for_window [window_role="GtkFileChooserDialog"] resize set 800 600
+	for_window [window_role="GtkFileChooserDialog"] move position center
+	
+	# default floating
+	for_window [window_role="pop-up"] floating enable
+	for_window [window_role="bubble"] floating enable
+	for_window [window_role="task_dialog"] floating enable
+	for_window [window_role="Preferences"] floating enable
+	for_window [window_type="dialog"] floating enable
+	for_window [window_type="menu"] floating enable
+	for_window [instance="update_installer"] floating enable	
+
+	# float terminal menu
+	for_window [title="^launcher$"] floating enable, border none, opacity 0.8, resize set 400 300, move position center
+
+	# Remmina
+	for_window [app_id="org.remmina.Remmina"] floating enable, move 1920px 0px
+	for_window [title="lunatic"] floating enable, move position 0px 0px
+
+    # Ulauncher
+	for_window [title="auncher$"] floating enable, border none
+	for_window [title="Preferences$"] floating enable, border none
+	for_window [title="^New Hotkey$"] floating enable, border none
+
+	# wev wayland event viewer
+	for_window [title="^wev$"] floating enable
+
+	# image viewer
+	for_window [app_id="^swayimg_*"] floating enable
+	for_window [instance="nomacs"] floating enable
+
+	# volume/brightness display
+	for_window [app_id="avizo-service"] floating enable, border none, sticky enable
+
+	# fcitx5-config-qt
+	for_window [class="fcitx5-config-qt"] floating enable
+
+	# guake
+	for_window [title="Guake!"]  floating enable, resize set 1920 500, move position 0px 553px, sticky enable, border normal 0
+	#for_window [title="Guake!"] floating enable, resize set 1920 500, position bottom, sticky enable
+	for_window [title="Guakeの設定"] floating enable, position center, sticky enable
+
+	# sshaskpass
+	for_window [class="lxqt-openssh-askpass"] floating enable, resize set 400 150, position center
+
+	# seahorse (GNOME 鍵マネージャ)
+	for_window [app_id="seahorse"] floating enable
+
+	# Thunderbird 予定の編集ダイアログ
+	for_window [title="項目の編集"] floating enable
+
+	# firefox ブックマークマネージャ
+	for_window [instance="Places"] floating enable
+    for_window [title="Firefox - Sharing Indicator"] floating enable
+    for_window [title="Close Firefox"] floating enable, sticky enable
+
+    for_window [title="Slack Call Minipanel"] floating enable
+
+	# Nautilus
+	for_window [instance="org.gnome.Nautilus"] floating enable, sticky enable
+	for_window [app_id="(?i)thunar"] floating enable, sticky enable
+	for_window [app_id="org.gnome.(Nautilus|Weather)"] floating enable
+	for_window [app_id="pcmanfm"] floating enable, resize set 1000 800
+
+	# Tag xwayland windows as such
+	for_window [shell="xwayland"] title_format "%title [X]"

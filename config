@@ -1,0 +1,41 @@
+# Default config for sway
+#
+# Copy this to ~/.config/sway/config and edit it to your liking.
+#
+# Read `man 5 sway` for a complete reference.
+
+### Variables
+#
+#  Use Mod1 for Alt.
+#  Use Mod4 for Logo key.
+
+set $mod Mod4
+# Home row direction keys, like vim
+set $left h
+set $down j
+set $up k
+set $right l
+# Your preferred terminal emulator
+set $term konsole
+set $fileman thunar
+#set $term alacritty
+set $dropdown-term guake-toggle
+
+set $swaylock swaylock -f -c 000000 --fade-in 1.5 --indicator-radius 150 --clock --indicator-idle-visible
+
+# set SWAYSOCK
+exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
+
+# Your preferred application launcher
+# Note: pass the final command to swaymsg so that the resulting window can be opened
+# on the original workspace that the command was run on.
+#set $menu dmenu_path | dmenu | xargs swaymsg exec --
+set $menu ulauncher | xargs swaymsg exec --
+
+set $DISP_LEFT DP-4
+set $DISP_RIGHT HDMI-A-3
+
+
+include /etc/sway/config.d/*
+include ~/.config/sway/config.d/*
+include autostart

@@ -1,0 +1,38 @@
+title_align center
+titlebar_padding 50 5 # horizontal vertical
+titlebar_border_thickness 2
+
+# Borders
+default_border normal 3
+# default_floating_border pixel 2
+default_floating_border normal 4
+#hide_edge_borders none
+#smart_borders off
+smart_gaps on
+gaps inner 2
+
+font pango:VL PGothic 12
+
+#                                                         
+# class                 border  backgr. text    indicator child_border
+# 285577
+#client.focused          #a3d0ff #023e7d #ffffff #2e9ef4  #285577
+#client.focused_inactive #333333 #5c677d #ffffff #484e50  #5f676a
+#client.unfocused        #333333 #222222 #888888 #292d2e  #222222
+#client.urgent           #2f343a #900000 #ffffff #900000  #900000
+#client.placeholder      #000000 #0c0c0c #ffffff #000000  #0c0c0c
+
+set $fo_bdr #285577
+set $un_bdr #222222
+
+# border    = ウィンドウタイトル部のボーダー
+# backgr.   = ウィンドウタイトル部の背景
+# text      = ウィンドウタイトル部の文字色
+# indicator = 次のウィンドウが表示される方向
+#
+# class                 border  backgr. text    indicator child_border
+client.focused          #075fba #023e7d #ffffff $fo_bdr $fo_bdr
+client.focused_inactive #5c677d #5c677d #ffffff $fo_bdr $fo_bdr
+client.unfocused        #5c677d #5c677d #888888 $un_bdr $un_bdr
+client.urgent           #2f343a #900000 #ffffff $un_bdr $un_bdr
+client.placeholder      #un_bdr #0c0c0c #ffffff $un_bdr $un_bdr

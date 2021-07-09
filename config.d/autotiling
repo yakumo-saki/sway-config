@@ -1,0 +1,4 @@
+#
+# https://github.com/nwg-piotr/autotiling
+#
+exec autotiling -w 1 2

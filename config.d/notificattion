@@ -1,0 +1,12 @@
+#
+# Notification Daemon
+#
+# mako (https://github.com/emersion/mako)
+# dunst (https://github.com/dunst-project/dunst)
+
+#exec mako
+exec_always killall dunst || dunst
+
+# Notification dismiss
+# bindsym $mod+delete exec makoctl dismiss
+bindsym $mod+delete exec dunstctl close-all

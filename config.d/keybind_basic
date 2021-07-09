@@ -1,0 +1,42 @@
+#
+# Basics:
+#
+# Start a terminal
+bindsym $mod+Return exec $term
+bindsym f1 exec $dropdown-term
+
+bindsym $mod+l exec swaylock -f -c 000000 --fade-in 0.5 --indicator-radius 150 --clock --indicator
+
+# Kill focused window
+bindsym $mod+Shift+q kill
+bindsym $mod+q kill
+
+# Logout / poweroff
+# https://github.com/nwg-piotr/nwg-launchers
+bindsym $mod+Pause exec nwgbar
+
+# Start your launcher
+bindsym $mod+d exec $menu
+bindsym Ctrl+Shift+Return exec ulauncher-toggle
+
+# Drag floating windows by holding down $mod and left mouse button.
+# Resize them with right mouse button + $mod.
+# Despite the name, also works for non-floating windows.
+# Change normal to inverse to use left mouse button for resizing and right
+# mouse button for dragging.
+floating_modifier $mod normal
+
+# Reload the configuration file
+bindsym $mod+Shift+c reload
+
+# Exit sway (logs you out of your Wayland session)
+# bindsym $mod+Shift+ctrl+q exec swaynag -t warning -m 'Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+bindsym $mod+Shift+ctrl+q exec swaymsg exit
+
+# Screenshot
+bindsym mod1+Print exec ~/dotfiles/sway/scripts/screenshot.sh 
+bindsym ctrl+Print exec ~/dotfiles/sway/scripts/screenshot.sh Region
+bindsym Print exec ~/dotfiles/sway/scripts/screenshot.sh
+
+bindsym $mod+e exec $fileman
+

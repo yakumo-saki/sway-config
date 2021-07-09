@@ -1,0 +1,6 @@
+# Polkit is needed for require privileges
+# https://www.fosskers.ca/en/blog/wayland
+#
+# https://wiki.archlinux.org/index.php/Polkit
+
+exec_always /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1

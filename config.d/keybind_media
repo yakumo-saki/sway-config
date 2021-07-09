@@ -1,0 +1,32 @@
+#
+# My Volume:
+#
+
+# 
+bindsym Mod3+f7 exec playerctl previous
+bindsym Mod3+f8 exec playerctl play-pause
+bindsym Mod3+f9 exec playerctl next
+
+# volume
+# show volume UI using avizo
+# https://github.com/misterdanb/avizo
+# 20210615 volumectl -> volctl.sh (modified amixer -> pamixer)
+# 
+exec_always avizo-service
+bindsym Mod3+f10 exec ~/dotfiles/sway/scripts/volctl.sh lower
+bindsym Mod3+f11 exec ~/dotfiles/sway/scripts/volctl.sh raise
+bindsym Mod3+f12 exec ~/dotfiles/sway/scripts/volctl.sh mute
+bindsym $mod+f10 exec ~/dotfiles/sway/scripts/volctl.sh lower
+bindsym $mod+f11 exec ~/dotfiles/sway/scripts/volctl.sh raise
+bindsym $mod+f12 exec ~/dotfiles/sway/scripts/volctl.sh mute
+
+# volume
+# show Volume bar using wob
+# wob https://github.com/francma/wob
+# Show progress bar at center of screen
+#set $WOBSOCK $XDG_RUNTIME_DIR/wob.sock
+#exec mkfifo $WOBSOCK && tail -f $WOBSOCK | wob
+
+#bindsym Mod3+f10 exec pamixer --get-volume --decrease 5 | head -1 > $WOBSOCK 
+#bindsym Mod3+f11 exec pamixer --unmute --get-volume --increase 5 | head -1 > $WOBSOCK
+#bindsym Mod3+f12 exec ~/dotfiles/mute_toggle.sh > $WOBSOCK
