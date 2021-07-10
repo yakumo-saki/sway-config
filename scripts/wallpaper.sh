@@ -1,7 +1,7 @@
 #!/bin/bash -eu
 # @(#) This script changes wallpaper 
 
-WALLPAPER_DIR=~/OneDrive/99_private/wallpaper/
+WALLPAPER_DIR=~/Dropbox/99_private/wallpaper
 DISPLAY_0=HDMI-A-3
 DISPLAY_1=DP-4
 PIDFILE=/tmp/wallpaper.sh.pid
