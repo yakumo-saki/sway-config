@@ -34,9 +34,10 @@
 	# float terminal menu
 	for_window [title="^launcher$"] floating enable, border none, opacity 0.8, resize set 400 300, move position center
 
-	# Remmina
-	for_window [app_id="org.remmina.Remmina"] floating enable, move 1920px 0px
-	for_window [title="lunatic"] floating enable, move position 0px 0px
+	# Remmina (main window=680px)
+	for_window [title="Remmina リモートデスクトップクライアント"] floating enable, sticky disable
+	for_window [title="lunatic"] floating enable, sticky disable, move position 0px 0px
+	for_window [title="server"] floating enable, sticky disable, move position 0px 0px
 
     # Ulauncher
 	for_window [title="auncher$"] floating enable, border none

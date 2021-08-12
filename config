@@ -23,6 +23,8 @@ set $dropdown-term guake-toggle
 
 set $swaylock swaylock -f -c 000000 --fade-in 1.5 --indicator-radius 150 --clock --indicator-idle-visible
 
+set $volctl ~/.config/sway/scripts/volctl.sh
+
 # set SWAYSOCK
 exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
 

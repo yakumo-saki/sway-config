@@ -13,12 +13,12 @@ bindsym Mod3+f9 exec playerctl next
 # 20210615 volumectl -> volctl.sh (modified amixer -> pamixer)
 # 
 exec_always avizo-service
-bindsym Mod3+f10 exec ~/dotfiles/sway/scripts/volctl.sh lower
-bindsym Mod3+f11 exec ~/dotfiles/sway/scripts/volctl.sh raise
-bindsym Mod3+f12 exec ~/dotfiles/sway/scripts/volctl.sh mute
-bindsym $mod+f10 exec ~/dotfiles/sway/scripts/volctl.sh lower
-bindsym $mod+f11 exec ~/dotfiles/sway/scripts/volctl.sh raise
-bindsym $mod+f12 exec ~/dotfiles/sway/scripts/volctl.sh mute
+bindsym Mod3+f10 exec $volctl lower
+bindsym Mod3+f11 exec $volctl raise
+bindsym Mod3+f12 exec $volctl mute
+bindsym $mod+f10 exec $volctl lower
+bindsym $mod+f11 exec $volctl raise
+bindsym $mod+f12 exec $volctl mute
 
 # volume
 # show Volume bar using wob

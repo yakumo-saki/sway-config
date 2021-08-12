@@ -33,3 +33,5 @@
 	assign [class="Joplin"] 6
         assign [class="VSCodium"] 6
 	assign [app_id="org.remmina.Remmina"] 11
+        assign [title="Remmina リモートデスクトップクライアント"] 11
+        

@@ -9,6 +9,5 @@
 exec swayidle \
          timeout 540 'swaylock -f -c 000000 --fade-in 1.5 --grace 60 --indicator-radius 150 --clock --indicator' \
          timeout 600 'swaymsg "output * dpms off"' \
-         resume 'swaymsg "output * dpms on"' \
-         resume 'sh -c "if pgrep waybar; then echo ok; else waybar; fi"' \
+         resume '~/.config/sway/scripts/resume_from_lock.sh' \
          before-sleep 'playerctl --all-players pause'

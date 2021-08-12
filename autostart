@@ -20,7 +20,8 @@ exec sleep 15 && thunderbird
 exec sleep 20 && slack
 exec sleep 20 && biscuit
 
-exec sleep 30 && joplin-desktop
+# exec sleep 30 && joplin-desktop
+exec sleep 30 && codium ~/src/blog
 
 exec sleep 40 && deadbeef
 exec sleep 40 && chromium
