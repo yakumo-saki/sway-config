@@ -74,6 +74,7 @@ case "$CHOICE" in
         ORG_FILENAME=$FILENAME
         FILENAME=${TARGET}/`basename ${FILENAME} .png`-half.png
         convert $ORG_FILENAME -resize 50% $FILENAME
+        rm $ORG_FILENAME
         ;;
     "Region-Resize-25percent")
         slurp | grim -g - "$FILENAME"
