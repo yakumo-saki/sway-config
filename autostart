@@ -8,16 +8,16 @@ exec sleep 5 && fcitx -d --replace
 
 exec sleep 10 && thunar --daemon
 exec sleep 10 && GDK_BACKEND=wayland ulauncher --hide-window
-exec sleep 10 && guake --hide && sleep 5 && guake --hide 
+exec sleep 10 && guake --show && sleep 1 && guake --hide 
 exec sleep 10 && rescuetime
 exec sleep 10 && dropbox
 exec sleep 10 && remmina
 exec sleep 10 && firefox
-exec sleep 10 && min
+#exec sleep 10 && min
 
 exec sleep 15 && thunderbird
 
-exec sleep 20 && slack
+#exec sleep 20 && slack
 exec sleep 20 && biscuit
 
 # exec sleep 30 && joplin-desktop

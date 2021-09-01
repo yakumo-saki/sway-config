@@ -6,6 +6,9 @@
 bindsym Mod3+f7 exec playerctl previous
 bindsym Mod3+f8 exec playerctl play-pause
 bindsym Mod3+f9 exec playerctl next
+bindsym $mod+f7 exec playerctl previous
+bindsym $mod+f8 exec playerctl play-pause
+bindsym $mod+f9 exec playerctl next
 
 # volume
 # show volume UI using avizo
