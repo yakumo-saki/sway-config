@@ -3,7 +3,7 @@
 
 WALLPAPER_DIR=~/Dropbox/99_private/wallpaper
 DISPLAY_0=HDMI-A-3
-DISPLAY_1=DP-4
+DISPLAY_1=DVI-D-1
 PIDFILE=/tmp/wallpaper.sh.pid
 
 function change_wallpaper() {

@@ -29,7 +29,7 @@
         assign [class="firefox"] 1
 	assign [class="Slack"] 3
         assign [class="hunderbird$"] 4
-	assign [class="biscuit"] 5
+	assign [class="biscuit"] 3
 	assign [class="Joplin"] 6
         assign [class="VSCodium"] 6
 	assign [app_id="org.remmina.Remmina"] 11
