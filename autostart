@@ -4,6 +4,8 @@
 # exec       : exec on boot
 # sleep 5 -> wait for initializing tray
 #
+
+exec_always ~/.config/sway/scripts/kill_waybar.sh
 exec sleep 5 && fcitx -d --replace
 exec sleep 5 && guake
 
