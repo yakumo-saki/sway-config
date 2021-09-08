@@ -22,18 +22,6 @@
 	for_window [window_role="GtkFileChooserDialog"] resize set 800 600
 	for_window [window_role="GtkFileChooserDialog"] move position center
 	
-	# default floating
-	for_window [window_role="pop-up"] floating enable
-	for_window [window_role="bubble"] floating enable
-	for_window [window_role="task_dialog"] floating enable
-	for_window [window_role="Preferences"] floating enable
-	for_window [window_type="dialog"] floating enable
-	for_window [window_type="menu"] floating enable
-	for_window [instance="update_installer"] floating enable	
-
-	# float terminal menu
-	for_window [title="^launcher$"] floating enable, border none, opacity 0.8, resize set 400 300, move position center
-
 	# Remmina (main window=680px)
 	for_window [title="Remmina リモートデスクトップクライアント"] floating enable, sticky disable
 	for_window [title="lunatic"] floating enable, sticky disable, move position 0px 0px
@@ -88,5 +76,18 @@
     for_window [title="ReplayGain Scan*"] floating enable
     for_window [title="Updating File Tag*"] floating enable
 
+	# default floating
+	for_window [window_role="pop-up"] floating enable, sticky enable
+	for_window [window_role="bubble"] floating enable
+	for_window [window_role="task_dialog"] floating enable
+	for_window [window_role="Preferences"] floating enable
+	for_window [window_role="Dialog"] floating enable, sticky enable
+	for_window [window_type="dialog"] floating enable, sticky enable
+	for_window [window_type="menu"] floating enable
+	for_window [instance="update_installer"] floating enable, sticky enable
+
+	# float terminal menu
+	for_window [title="^launcher$"] floating enable, border none, opacity 0.8, resize set 400 300, move position center
+	
 	# Tag xwayland windows as such
 	for_window [shell="xwayland"] title_format "%title [X]"
