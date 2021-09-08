@@ -9,7 +9,10 @@
 #  Use Mod1 for Alt.
 #  Use Mod4 for Logo key.
 
+# $mod = Windows key  $rmod = context menu
 set $mod Mod4
+set $rmod Mod3
+
 # Home row direction keys, like vim
 set $left h
 set $down j
