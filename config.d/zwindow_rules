@@ -59,12 +59,13 @@
 	# Thunderbird 予定の編集ダイアログ
 	for_window [title="項目の編集"] floating enable
 
-	# firefox ブックマークマネージャ
+	# firefox
 	for_window [instance="Places"] floating enable
     for_window [title="Firefox - Sharing Indicator"] floating enable
     for_window [title="Close Firefox"] floating enable, sticky enable
 	for_window [window_role="page-info"] floating enable
     for_window [title="Slack Call Minipanel"] floating enable
+	for_window [instance="Devtools"] floating enable
 
 	# File managers
 	for_window [instance="org.gnome.Nautilus"] floating enable, sticky enable

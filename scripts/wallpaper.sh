@@ -2,8 +2,10 @@
 # @(#) This script changes wallpaper 
 
 WALLPAPER_DIR=~/Dropbox/99_private/wallpaper
-DISPLAY_0=HDMI-A-3
-DISPLAY_1=DVI-D-1
+#DISPLAY_0=HDMI-A-3
+#DISPLAY_1=DVI-D-1
+DISPLAY_0=$1
+DISPLAY_1=$2
 PIDFILE=/tmp/wallpaper.sh.pid
 
 function change_wallpaper() {
