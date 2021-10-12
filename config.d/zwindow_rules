@@ -56,6 +56,10 @@
 	# seahorse (GNOME 鍵マネージャ)
 	for_window [app_id="seahorse"] floating enable
 
+	# virt-manager (KVM管理)
+	for_window [app_id="virt-manager"] floating enable
+
+
 	# Thunderbird 予定の編集ダイアログ
 	for_window [title="項目の編集"] floating enable
 
