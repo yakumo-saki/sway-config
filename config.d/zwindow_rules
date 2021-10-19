@@ -46,8 +46,10 @@
 	for_window [class="fcitx5-config-qt"] floating enable
 
 	# guake
-	for_window [title="Guake!"]  floating enable, resize set 1920 500, move position 0px 553px, sticky enable, border normal 0
-	#for_window [title="Guake!"] floating enable, resize set 1920 500, position bottom, sticky enable
+	#afor_window [title="Guake!"] floating enable, sticky enable, border none
+	#aaafor_window [title="Guake!"] floating enable, resize set 1920 500, move position 0 553, sticky enable
+	for_window [title="Guake!"] floating enable, resize set 1920 500, position bottom, sticky enable
+	
 	for_window [title="Guakeの設定"] floating enable, position center, sticky enable
 
 	# sshaskpass
@@ -59,11 +61,11 @@
 	# virt-manager (KVM管理)
 	for_window [app_id="virt-manager"] floating enable
 
-
 	# Thunderbird 予定の編集ダイアログ
 	for_window [title="項目の編集"] floating enable
 
 	# firefox
+	for_window [title="Mozilla Firefox"] border none
 	for_window [instance="Places"] floating enable
     for_window [title="Firefox - Sharing Indicator"] floating enable
     for_window [title="Close Firefox"] floating enable, sticky enable

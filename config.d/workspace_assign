@@ -13,26 +13,38 @@
         workspace 6 output $DISP_RIGHT
         workspace 7 output $DISP_RIGHT
         workspace 11 output $DISP_RIGHT
+        workspace 12 output $DISP_RIGHT
 
 	# Workspace 
         # looking only = LEFT  output = RIGHT
 	# check app_id / class / title using
 	# swaymsg -t get_tree | jq
-        assign [class="Min"] 7
-	assign [app_id="deadbeef"] 9
-	assign [title="Chromium$"] 10
-	assign [title="VLC media player"] 10
+        assign [class="Min"] workspace number 7
+        assign [class="firefox"] workspace number 7
+
+        #
+	assign [app_id="deadbeef"] workspace number 9
+
+        #
+	assign [title="Chromium$"] workspace number 10
+	assign [title="VLC media player"] workspace number 10
 
 	# assign [class="RIGHT"] 4
         # assign main 1
         #
-        assign [class="firefox"] 1
-	assign [class="Slack"] 3
-        assign [class="hunderbird$"] 4
-	assign [class="biscuit"] 3
-	assign [class="Joplin"] 6
-        assign [class="VSCodium"] 6
-	assign [app_id="org.remmina.Remmina"] 11
-	assign [app_id="virt-manager"] 11
-        assign [title="Remmina リモートデスクトップクライアント"] 11
+	assign [class="Slack"] workspace number 3
+        assign [class="hunderbird$"] workspace number 4
+	assign [class="biscuit"] workspace number 3
+	assign [class="Joplin"] workspace number 6
+        assign [class="VSCodium"] workspace number 6
+
+        # 
+        assign [title="VMWIN10"]: workspace number 12
+
+        #
+        assign [app_id="org.remmina.Remmina" title="lunatic"] workspace number 11
+        assign [app_id="org.remmina.Remmina" title="VMWIN10"] workspace number 12
+        assign [app_id="org.remmina.Remmina"] workspace number 11
+         
+	assign [app_id="virt-manager"] workspace number 12
         

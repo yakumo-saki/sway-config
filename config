@@ -19,7 +19,8 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term konsole
+#set $term konsole
+set $term gnome-terminal
 set $fileman thunar
 #set $term alacritty
 set $dropdown-term guake-toggle

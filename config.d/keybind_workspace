@@ -13,9 +13,10 @@
     bindsym $mod+9 workspace number 9
     bindsym $mod+0 workspace number 10
     bindsym $mod+minus workspace number 11
+    bindsym $mod+asciicircum workspace number 12
 
     bindsym $rmod+minus workspace number 7
-    bindsym $rmod+asciicircum workspace number 8
+    #bindsym $rmod+asciicircum workspace number 8
     bindsym $rmod+backslash workspace number 9
     bindsym $rmod+backspace workspace number 10
 
@@ -31,6 +32,7 @@
     bindsym $mod+Shift+9 move container to workspace number 9
     bindsym $mod+Shift+0 move container to workspace number 10
     bindsym $mod+Shift+minus move container to workspace number 11
+    bindsym $mod+Shift+asciicircum move container to workspace number 12
 
     # move focused container to workspace (ctrl)
     bindsym $mod+Ctrl+1 move container to workspace number 1
@@ -44,6 +46,7 @@
     bindsym $mod+Ctrl+9 move container to workspace number 9
     bindsym $mod+Ctrl+0 move container to workspace number 10
     bindsym $mod+Ctrl+minus move container to workspace number 11
+    bindsym $mod+Ctrl+asciicircum move container to workspace number 11
 
     # Quick move to LEFT Display
     bindsym Mod3+Return move container to workspace number 7
