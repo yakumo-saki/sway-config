@@ -70,6 +70,7 @@
 
 	# Thunderbird 予定の編集ダイアログ
 	for_window [title="項目の編集"] floating enable
+	for_window [title="メッセージフィルター"] floating enable
 
 	# firefox
 	for_window [title="Mozilla Firefox"] border none

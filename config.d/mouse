@@ -1,7 +1,12 @@
 #
 # mouse cursor
+# must be same below (config for gtk based apps)
+# gsettings get org.gnome.desktop.interface cursor-size
+# gsettings get org.gnome.desktop.interface cursor-theme
+#  and Qt based apps)
 set $my_cursor_theme capitaine-cursors
-set $my_cursor_size 64
+set $my_cursor_size 48
+
 seat seat0 xcursor_theme $my_cursor_theme $my_cursor_size
 
 exec_always {
