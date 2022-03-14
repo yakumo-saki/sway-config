@@ -3,9 +3,10 @@
 #
 # Start a terminal
 bindsym $mod+Return exec $term
-bindsym f1 exec $dropdown-term
+bindsym f1 exec $dropdown-term-toggle
 
-bindsym $mod+l exec swaylock -f -c 000000 --fade-in 0.5 --indicator-radius 150 --clock --indicator
+#bindsym $mod+l exec swaylock -f -c 000000 --fade-in 0.5 --indicator-radius 150 --clock --indicator
+bindsym $mod+l exec $swaylock
 
 # Kill focused window
 bindsym $mod+Shift+q kill

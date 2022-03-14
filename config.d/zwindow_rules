@@ -1,3 +1,7 @@
+#
+#
+#
+
 	# Auto float apps
 	for_window [app_id="system-config-printer"] floating enable
 	for_window [app_id="gnome-calculator"] floating enable
@@ -47,10 +51,13 @@
 
 	# guake
 	#afor_window [title="Guake!"] floating enable, sticky enable, border none
-	#aaafor_window [title="Guake!"] floating enable, resize set 1920 500, move position 0 553, sticky enable
-	for_window [title="Guake!"] floating enable, resize set 1920 500, position bottom, sticky enable
-	
+	for_window [app_id="guake"] floating enable
+	for_window [title="Guake!"] floating enable
+	#for_window [class="Guake"] floating enable, resize set 1920 500, move position 0 553
 	for_window [title="Guakeの設定"] floating enable, position center, sticky enable
+
+	# xfce4-terminal for dropdown terminal
+	for_window [app_id="xfce4-terminal"] floating enable; sticky enable; resize set 1920 450; move position 0px 590px
 
 	# sshaskpass
 	for_window [class="lxqt-openssh-askpass"] floating enable, resize set 400 150, position center
@@ -72,6 +79,7 @@
 	for_window [window_role="page-info"] floating enable
     for_window [title="Slack Call Minipanel"] floating enable
 	for_window [instance="Devtools"] floating enable
+	for_window [title="Firefox.*共有インジケータ"] floating enable
 
 	# File managers
 	for_window [instance="org.gnome.Nautilus"] floating enable, sticky enable

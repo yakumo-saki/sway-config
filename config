@@ -18,12 +18,19 @@ set $left h
 set $down j
 set $up k
 set $right l
+
 # Your preferred terminal emulator
-#set $term konsole
-set $term gnome-terminal
-set $fileman thunar
-#set $term alacritty
-set $dropdown-term guake-toggle
+set $term konsole
+#set $term gnome-terminal
+
+#set $fileman thunar
+set $fileman dolphin
+
+# dropdown terminal
+set $dropdown-term-start xfce4-terminal --drop-down --hide-menubar
+set $dropdown-term-toggle xfce4-terminal --drop-down --hide-menubar
+
+#exec $dropdown-term-start
 
 set $swaylock swaylock -f -c 000000 --fade-in 1.5 --indicator-radius 150 --clock --indicator-idle-visible
 
@@ -45,6 +52,11 @@ set $DISP_RIGHT HDMI-A-1
 output $DISP_LEFT resolution 1920x1080 position 0,0
 output $DISP_RIGHT resolution 3840x2160 position 1920,0 scale 2
 
+# nwg-shell disabled
+#include config.nwg
+
 include /etc/sway/config.d/*
 include ~/.config/sway/config.d/*
-include autostart
+
+# NOTE autostart file is maintained by nwg-shell
+include autoexec
