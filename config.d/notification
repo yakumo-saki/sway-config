@@ -5,8 +5,14 @@
 # dunst (https://github.com/dunst-project/dunst)
 
 #exec mako
-exec_always killall dunst || dunst
+#exec_always killall dunst || dunst
 
 # Notification dismiss
 # bindsym $mod+delete exec makoctl dismiss
-bindsym $mod+delete exec dunstctl close-all
+#bindsym $mod+delete exec dunstctl close-all
+
+# Notification Daemon
+exec swaync
+
+# Toggle control center
+bindsym $mod+Shift+n exec swaync-client -t -sw

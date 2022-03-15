@@ -1,5 +1,5 @@
 #
-#
+# swaymsg -t get_tree | jq
 #
 
 	# Auto float apps
@@ -81,6 +81,9 @@
     for_window [title="Slack Call Minipanel"] floating enable
 	for_window [instance="Devtools"] floating enable
 	for_window [title="Firefox.*共有インジケータ"] floating enable
+
+	# chromium
+	for_window [app_id="chromium"] border none
 
 	# File managers
 	for_window [instance="org.gnome.Nautilus"] floating enable, sticky enable
