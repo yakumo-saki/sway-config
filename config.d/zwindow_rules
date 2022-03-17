@@ -43,6 +43,9 @@
 	for_window [app_id="^swayimg_*"] floating enable
 	for_window [instance="nomacs"] floating enable
 
+	# font tester
+	for_window [app_id="font-tester"] floating enable
+
 	# volume/brightness display
 	for_window [app_id="avizo-service"] floating enable, border none, sticky enable
 
@@ -57,10 +60,11 @@
 	for_window [title="Guakeの設定"] floating enable, position center, sticky enable
 
 	# xfce4-terminal for dropdown terminal
-	for_window [app_id="xfce4-terminal"] floating enable; sticky enable; resize set 1920 450; move position 0px 590px
+	for_window [app_id="xfce4-terminal"] floating enable; sticky enable; resize set width 1900px height 450px; move position 0px 585px
+	for_window [title="ターミナルの設定"] floating enable; resize set 800 450; move position center;
 
 	# sshaskpass
-	for_window [class="lxqt-openssh-askpass"] floating enable, resize set 400 150, position center
+	for_window [class="lxqt-openssh-askpass"] floating enable, resize set 400 150, move position center
 
 	# seahorse (GNOME 鍵マネージャ)
 	for_window [app_id="seahorse"] floating enable
@@ -90,6 +94,7 @@
 	for_window [app_id="(?i)thunar"] floating enable, sticky enable
 	for_window [app_id="org.gnome.(Nautilus|Weather)"] floating enable
 	for_window [app_id="pcmanfm"] floating enable, resize set 1000 800
+	for_window [app_id="org.kde.dolphin"] floating enable
 
 	# DeaDBeeF
     for_window [title="ReplayGain Scan*"] floating enable

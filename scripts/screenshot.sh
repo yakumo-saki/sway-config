@@ -15,6 +15,13 @@ OUTPUTS=$(swaymsg -t get_outputs | jq -r '.[] | select(.active) | .rect | "\(.x)
 WINDOWS=$(swaymsg -t get_tree | jq -r '.. | select(.pid? and .visible?) | .rect | "\(.x),\(.y) \(.width)x\(.height)"')
 REC_PID=$(pidof $RECORDER) || true
 
+# 12x6+0.5+0 GIMP
+# -unsharp 10x5+0.7+0 よき
+# -unsharp 2x1.4+0.5+0 ぼやける
+#CONVERT_OPTS="-unsharp 12x6+0.5+0 -quality 100"
+# https://qiita.com/yoya/items/b1590de289b623f18639
+CONVERT_OPTS="-colorspace RGB -filter Lanczos -define filter:blur=.9891028367558475 -colorspace sRGB"
+
 notify() {
     ## if the daemon is not running notify-send will hang indefinitely
     if [ $NOTIFY ]; then
@@ -73,14 +80,14 @@ case "$CHOICE" in
         slurp | grim -g - "$FILENAME"
         ORG_FILENAME=$FILENAME
         FILENAME=${TARGET}/`basename ${FILENAME} .png`-half.png
-        convert $ORG_FILENAME -resize 50% $FILENAME
+        convert $ORG_FILENAME $CONVERT_OPTS -distort Resize 50% $FILENAME
         rm $ORG_FILENAME
         ;;
     "Region-Resize-25percent")
         slurp | grim -g - "$FILENAME"
         ORG_FILENAME=$FILENAME
         FILENAME=${TARGET}/`basename ${FILENAME} .png`-25.png
-	convert $ORG_FILENAME -resize 25% $FILENAME
+	    convert $ORG_FILENAME $CONVERT_OPTS -distort Resize 25% $FILENAME
         ;;
     "Select-output")
         echo "$OUTPUTS" | slurp | grim -g - "$FILENAME" ;;
