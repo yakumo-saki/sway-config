@@ -60,8 +60,8 @@
 	for_window [title="Guakeの設定"] floating enable, position center, sticky enable
 
 	# xfce4-terminal for dropdown terminal
-	for_window [app_id="xfce4-terminal"] floating enable; sticky enable; resize set width 1900px height 450px; move position 0px 585px
-	for_window [title="ターミナルの設定"] floating enable; resize set 800 450; move position center;
+	for_window [app_id="xfce4-terminal"] floating enable; sticky enable; resize set width 1900px height 455px; move position 0px 585px
+	for_window [app_id="xfce4-terminal" title="ターミナルの設定"] floating enable; resize set 800 450; move position center;
 
 	# sshaskpass
 	for_window [class="lxqt-openssh-askpass"] floating enable, resize set 400 150, move position center
@@ -73,18 +73,23 @@
 	for_window [app_id="virt-manager"] floating enable
 
 	# Thunderbird 予定の編集ダイアログ
-	for_window [title="項目の編集"] floating enable
-	for_window [title="メッセージフィルター"] floating enable
+	for_window [app_id="thunderbird" title="項目の編集"] floating enable
+	for_window [app_id="thunderbird" title="メッセージフィルター"] floating enable
+	for_window [app_id="thunderbird" title="作成:.*$"] floating enable
+	for_window [app_id="thunderbird" title=".*件の通知$"] floating enable
 
 	# firefox
-	for_window [title="Mozilla Firefox"] border none
-	for_window [instance="Places"] floating enable
-    for_window [title="Firefox - Sharing Indicator"] floating enable
-    for_window [title="Close Firefox"] floating enable, sticky enable
-	for_window [window_role="page-info"] floating enable
-    for_window [title="Slack Call Minipanel"] floating enable
-	for_window [instance="Devtools"] floating enable
-	for_window [title="Firefox.*共有インジケータ"] floating enable
+	for_window [app_id="firefox" title="Mozilla Firefox"] border none
+	for_window [app_id="firefox" instance="Places"] floating enable
+    for_window [app_id="firefox" title="Firefox - Sharing Indicator"] floating enable
+    for_window [app_id="firefox" title="Close Firefox"] floating enable, sticky enable
+	for_window [app_id="firefox" window_role="page-info"] floating enable
+    for_window [app_id="firefox" title="Slack Call Minipanel"] floating enable
+	for_window [app_id="firefox" instance="Devtools"] floating enable
+	for_window [app_id="firefox" title="Firefox.*共有インジケータ"] floating enable
+
+	#zoom
+	for_window [app_id="zoom"] floating enable
 
 	# chromium
 	for_window [app_id="chromium"] border none
@@ -92,7 +97,7 @@
 	# File managers
 	for_window [instance="org.gnome.Nautilus"] floating enable, sticky enable
 	for_window [app_id="(?i)thunar"] floating enable, sticky enable
-	for_window [app_id="org.gnome.(Nautilus|Weather)"] floating enable
+	for_window [app_id="org.gnome.(Nautilus|Weather)"] floating enable, border normal, resize set 1000px 600px
 	for_window [app_id="pcmanfm"] floating enable, resize set 1000 800
 	for_window [app_id="org.kde.dolphin"] floating enable
 

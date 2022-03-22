@@ -21,7 +21,7 @@ function change_wallpaper() {
 function kill_last_process() {
     if [ -e $PIDFILE ]; then
         LASTPID=`cat $PIDFILE`
-	echo "Kill last process $LASTPID"
+	echo "[`LANG=C date`] Kill last process $LASTPID"
 	set +e
         kill $LASTPID
 	set -e
@@ -34,7 +34,7 @@ echo $$ > $PIDFILE
 
 change_wallpaper
 while true; do
-    echo "Wait for next wallpaper change"
+    echo "[`LANG=C date`] Wait for next wallpaper change"
     sleep 1190
     change_wallpaper
 done

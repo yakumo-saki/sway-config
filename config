@@ -24,7 +24,9 @@ set $term konsole
 #set $term gnome-terminal
 
 #set $fileman thunar
-set $fileman dolphin
+# dolphin always open kwallet
+#set $fileman dolphin
+set $fileman nautilus
 
 # dropdown terminal
 set $dropdown-term-start xfce4-terminal --drop-down --hide-menubar

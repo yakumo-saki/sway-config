@@ -19,9 +19,11 @@
         # looking only = LEFT  output = RIGHT
 	# check app_id / class / title using
 	# swaymsg -t get_tree | jq
-        
+        # mozilla apps w/xwayland = class, without=appid
+
         assign [class="Min"] workspace number 7
         assign [class="firefox"] workspace number 2
+        assign [app_id="firefox"] workspace number 2
 
         #
 	assign [app_id="deadbeef"] workspace number 10
@@ -33,6 +35,7 @@
         assign [class="VSCodium"] workspace number 9
 
         assign [class="hunderbird$"] workspace number 7
+        assign [app_id="hunderbird$"] workspace number 7
 
 	assign [class="biscuit"] workspace number 8
 
@@ -49,3 +52,5 @@
         #
 	assign [title="Chromium$"] workspace number 13
 	assign [title="VLC media player"] workspace number 13
+        assign [app_id="zoom"] workspace number 13
+
