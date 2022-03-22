@@ -23,8 +23,7 @@
 	for_window [title="nmtui - Kitty"] floating enable
 	for_window [title="Fcitx Configuration"] floating enable
 	for_window [title="Update Check|Cryptomator"] floating enable, resize set 800 600
-	for_window [window_role="GtkFileChooserDialog"] resize set 800 600
-	for_window [window_role="GtkFileChooserDialog"] move position center
+	for_window [window_role="GtkFileChooserDialog"] resize set 800 600; move position center
 	
 	# Remmina (main window=680px)
 	for_window [title="Remmina リモートデスクトップクライアント"] floating enable, sticky disable
@@ -100,6 +99,7 @@
 	for_window [app_id="org.gnome.(Nautilus|Weather)"] floating enable, border normal, resize set 1000px 600px
 	for_window [app_id="pcmanfm"] floating enable, resize set 1000 800
 	for_window [app_id="org.kde.dolphin"] floating enable
+	for_window [app_id="nemo"] floating enable; border normal; resize set 1000px 600px;
 
 	# DeaDBeeF
     for_window [title="ReplayGain Scan*"] floating enable

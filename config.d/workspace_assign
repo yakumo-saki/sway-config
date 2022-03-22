@@ -2,8 +2,8 @@
 
         workspace 2 output $DISP_LEFT
         workspace 6 output $DISP_LEFT
-        workspace 8 output $DISP_LEFT
         workspace 10 output $DISP_LEFT
+        workspace 12 output $DISP_LEFT
         workspace 13 output $DISP_LEFT
 
         workspace 1 output $DISP_RIGHT
@@ -11,9 +11,9 @@
         workspace 4 output $DISP_RIGHT
         workspace 5 output $DISP_RIGHT
         workspace 7 output $DISP_RIGHT
+        workspace 8 output $DISP_RIGHT
         workspace 9 output $DISP_RIGHT
         workspace 11 output $DISP_RIGHT
-        workspace 12 output $DISP_RIGHT
 
 	# Workspace 
         # looking only = LEFT  output = RIGHT
@@ -21,32 +21,38 @@
 	# swaymsg -t get_tree | jq
         # mozilla apps w/xwayland = class, without=appid
 
-        assign [class="Min"] workspace number 7
         assign [class="firefox"] workspace number 2
         assign [app_id="firefox"] workspace number 2
 
+        assign [class="Slack"] workspace number 3
+
         #
-	assign [app_id="deadbeef"] workspace number 10
-
-
-	assign [class="Slack"] workspace number 3
-
 	assign [class="Joplin"] workspace number 6
-        assign [class="VSCodium"] workspace number 9
+	assign [class="biscuit"] workspace number 6
 
+        #
         assign [class="hunderbird$"] workspace number 7
         assign [app_id="hunderbird$"] workspace number 7
+        assign [class="Min"] workspace number 7
 
-	assign [class="biscuit"] workspace number 8
+        # 
+        assign [class="ClickUp"] workspace number 8
+
+        #
+        assign [class="VSCodium"] workspace number 9
 
         # 
         assign [title="VMWIN10"]: workspace number 12
 
         #
+	assign [app_id="deadbeef"] workspace number 10
+
+        #
         assign [app_id="org.remmina.Remmina" title="lunatic"] workspace number 11
         assign [app_id="org.remmina.Remmina" title="VMWIN10"] workspace number 12
         assign [app_id="org.remmina.Remmina"] workspace number 11
-         
+
+        #
 	assign [app_id="virt-manager"] workspace number 12
         
         #

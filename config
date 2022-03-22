@@ -26,7 +26,8 @@ set $term konsole
 #set $fileman thunar
 # dolphin always open kwallet
 #set $fileman dolphin
-set $fileman nautilus
+#set $fileman nautilus
+set $fileman nemo
 
 # dropdown terminal
 set $dropdown-term-start xfce4-terminal --drop-down --hide-menubar
@@ -60,5 +61,5 @@ output $DISP_RIGHT resolution 3840x2160 position 1920,0 scale 2
 include /etc/sway/config.d/*
 include ~/.config/sway/config.d/*
 
-# NOTE autostart file is maintained by nwg-shell
+# NOTE autostart file is maintained by nwg-shell. so I use autoexec
 include autoexec
