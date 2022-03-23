@@ -86,6 +86,7 @@
     for_window [app_id="firefox" title="Slack Call Minipanel"] floating enable
 	for_window [app_id="firefox" instance="Devtools"] floating enable
 	for_window [app_id="firefox" title="Firefox.*共有インジケータ"] floating enable
+	for_window [app_id="firefox" title="開発ツール.*"] floating enable
 
 	#zoom
 	for_window [app_id="zoom"] floating enable
