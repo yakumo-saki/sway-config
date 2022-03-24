@@ -20,7 +20,7 @@ exec_always /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 # enable gnome keyring (unlocked by PAM)
 exec gnome-keyring-daemon --start --components=pkcs11,secrets,ssh
-exec /usr/lib/seahorse/seahorse-ssh-askpass ~/.ssh/id_rsa
+exec /usr/lib/seahorse/seahorse-ssh-askpass id_rsa
 
 # kill duplicated waybar
 exec_always ~/.config/sway/scripts/kill_waybar.sh
