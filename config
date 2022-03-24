@@ -30,8 +30,11 @@ set $term konsole
 set $fileman nemo
 
 # dropdown terminal
-set $dropdown-term-start xfce4-terminal --drop-down --hide-menubar
-set $dropdown-term-toggle xfce4-terminal --drop-down --hide-menubar
+#set $dropdown-term-start "xfce4-terminal --drop-down --hide-menubar --dynamic-title-mode=before --initial-title=dropterm"
+#set $dropdown-term-toggle xfce4-terminal --drop-down --hide-menubar --dynamic-title-mode=before --initial-title=dropterm
+
+set $dropdown-term-start ~/.config/sway/scripts/toggle-term.sh
+set $dropdown-term-toggle ~/.config/sway/scripts/toggle-term.sh
 
 #exec $dropdown-term-start
 

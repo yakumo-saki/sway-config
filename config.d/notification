@@ -15,5 +15,6 @@
 exec swaync
 
 # Toggle control center
+bindsym $mod+n exec swaync-client -t -sw
 bindsym $mod+Shift+n exec swaync-client -t -sw
 bindsym $mod+delete exec swaync-client -C
