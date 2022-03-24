@@ -1,15 +1,15 @@
         workspace_auto_back_and_forth yes
 
-        workspace 2 output $DISP_LEFT
+        workspace 4 output $DISP_LEFT
+        workspace 5 output $DISP_LEFT
         workspace 6 output $DISP_LEFT
         workspace 10 output $DISP_LEFT
         workspace 12 output $DISP_LEFT
         workspace 13 output $DISP_LEFT
 
         workspace 1 output $DISP_RIGHT
+        workspace 2 output $DISP_RIGHT
         workspace 3 output $DISP_RIGHT
-        workspace 4 output $DISP_RIGHT
-        workspace 5 output $DISP_RIGHT
         workspace 7 output $DISP_RIGHT
         workspace 8 output $DISP_RIGHT
         workspace 9 output $DISP_RIGHT
