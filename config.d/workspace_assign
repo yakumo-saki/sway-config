@@ -21,10 +21,10 @@
 	# swaymsg -t get_tree | jq
         # mozilla apps w/xwayland = class, without=appid
 
-        assign [class="firefox"] workspace number 2
-        assign [app_id="firefox"] workspace number 2
-
         assign [class="Slack"] workspace number 3
+
+        assign [class="firefox"] workspace number 4
+        assign [app_id="firefox"] workspace number 4
 
         #
 	assign [class="Joplin"] workspace number 6
