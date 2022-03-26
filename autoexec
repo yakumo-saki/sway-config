@@ -2,15 +2,13 @@
 # My Exec configuration:
 # exec_always: exec on boot and config reload 
 # exec       : exec on boot
-# sleep 5 -> wait for initializing tray
+#
+##########################################################################################
+# system preparations
+##########################################################################################
 #
 
 exec_always ~/.config/sway/scripts/import_gsettings.sh
-exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
-
-# enable screencapture https://zenn.dev/haxibami/articles/wayland-sway-install#%E7%94%BB%E9%9D%A2%E5%85%B1%E6%9C%89
-exec dbus-update-activation-environment 2>/dev/null && \
-     dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP=sway
 
 # Polkit is needed for require privileges
 # https://www.fosskers.ca/en/blog/wayland
@@ -18,11 +16,21 @@ exec dbus-update-activation-environment 2>/dev/null && \
 exec_always /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 #exec_always /usr/lib/polkit-gnome/polkit-kde-authentication-agent-1
 
-# enable gnome keyring (unlocked by PAM)
-exec gnome-keyring-daemon --start --components=pkcs11,secrets,ssh
-exec /usr/lib/seahorse/seahorse-ssh-askpass id_rsa
+# dbus-update-activation-environmentと同じ効果なので停止
+exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
 
-# kill duplicated waybar
+# enable screencapture https://zenn.dev/haxibami/articles/wayland-sway-install#%E7%94%BB%E9%9D%A2%E5%85%B1%E6%9C%89
+exec dbus-update-activation-environment 2>/dev/null && \
+     dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP=sway
+
+##########################################################################################
+# Start GUI Applications
+##########################################################################################
+# 
+# sleep 5 -> wait for initializing tray
+#
+
+# kill waybar, if duplicated.
 exec_always ~/.config/sway/scripts/kill_waybar.sh
 
 exec sleep 3 && fcitx -d --replace
